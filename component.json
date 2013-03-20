@@ -1,14 +1,14 @@
 {
-  "name": "html5-search-cancel-button",
+  "name": "input-search",
   "version": "0.1.0",
   "main": [
-    "./src/main.css",
-    "./src/main.js",
+    "./src/css/main.css",
+    "./src/js/main.js",
     "./src/main.html"
   ],
   "dependencies": {
   },
   "devDependencies": {
-    "modernizr": "3.0.0pre"
+    "modernizr": "~2.6.2"
   }
 }
