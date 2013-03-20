@@ -1,0 +1,8 @@
+.search-cancel input[type="search"],
+.searchfield-as-textfield{
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  -o-appearance: textfield;
+  appearance: textfield;
+}
