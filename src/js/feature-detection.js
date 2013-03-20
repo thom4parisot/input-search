@@ -3,7 +3,7 @@
   var count = M._prefixes.length, i = 0;
   for (i = 0; i < count; i++){
     if (!supported){
-      M.testStyles('#modernizr, x::'+ (M._prefixes[i] || '-') +'search-cancel-button{ width: 666px }', function(el, rule){
+      M.testStyles('#modernizr, x::'+ (M._prefixes[i] || '-') +'search-cancel-button{ width: 666px }', function(el){
         supported = (el.offsetWidth === 666);
       });
     }
