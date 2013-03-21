@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "main": [
     "./src/css/main.css",
-    "./src/js/main.js",
+    "./src/js/searchfield.js",
     "./src/main.html"
   ],
   "dependencies": {
   },
   "devDependencies": {
-    "modernizr": "~2.6.2"
+    "modernizr": "~2.6.2",
+    "jquery": "~1.8.3"
   }
 }

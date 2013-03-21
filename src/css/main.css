@@ -6,3 +6,16 @@
   -o-appearance: textfield;
   appearance: textfield;
 }
+
+  .search-cancel input[type="search"]::-webkit-search-cancel-button,
+  .searchfield-as-textfield::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+  }
+
+  .searchfield-cancel-button{
+    display: block;
+    height: 12px;
+    outline: 1px solid red;
+    position: absolute;
+    width: 12px;
+  }
