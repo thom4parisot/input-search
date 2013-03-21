@@ -5,6 +5,8 @@
   -ms-appearance: textfield;
   -o-appearance: textfield;
   appearance: textfield;
+
+  padding-right: 14px;
 }
 
   .search-cancel input[type="search"]::-webkit-search-cancel-button,
@@ -13,13 +15,15 @@
   }
 
   .search-cancel-button{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/gif;base64,R0lGODlhDgAOAMQfALm4ufb29s7Ozufn58HBwdLS0tXV1evr69nY2MfGxt3c3L6+vq6vrt/f3729vcvLy7GxsePj47e3t7KysqysrP39/ba1tbW1tbCwsLy8vLOzs7q6uvv7+62trbu7u////yH5BAEAAB8ALAAAAAAOAA4AAAWL4PdVR5FkGSFEnPhxDYHOqBGIzeLtPG+Qi42jQNgYDUVPBAEAJAIHB0BRKTQfCYkEUOAMGhzFRuvYWC5nQeXTsJwvl41mfkFwvIC55pKYTKYfCAJeC34eCBgYBAEKiQ8BAo4BHgwQCxAMmQsaDBoDHxEWHaOkoxg/IxEbFKytGnYuHwFIGhBDB2sfIQA7");
     cursor: pointer;
     display: block;
-    height: 12px;
-    opacity: .5;
-    outline: 1px solid red;
+    height: 14px;
+    opacity: .7;
     position: absolute;
-    width: 12px;
+    width: 14px;
   }
   .search-cancel-button:hover{
     opacity: 1;

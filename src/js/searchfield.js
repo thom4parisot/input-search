@@ -54,7 +54,10 @@
       var position = this.$el.position();
 
       position.left += this.$el.outerWidth() - this.$cancelButton.width();
-      position.top += this.$cancelButton.innerHeight() / 2;
+
+      //simulating top=50% + margin-top=-halfsize for middle vertical align
+      position.top += (this.$el.outerHeight() + (parseInt(this.$el.css('border-top-width') || 0, 10))) / 2;
+      position.top -= this.$cancelButton.height() / 2;
 
       this.$cancelButton.offset(position);
     },
