@@ -16,9 +16,13 @@
     cursor: pointer;
     display: block;
     height: 12px;
+    opacity: .5;
     outline: 1px solid red;
     position: absolute;
     width: 12px;
+  }
+  .search-cancel-button:hover{
+    opacity: 1;
   }
   .search-cancel-button.hidden{
     visibility: hidden;
