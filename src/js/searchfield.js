@@ -21,15 +21,20 @@
      * Leaving a search field
      */
     blur: function blur(){
-
-
+      this.maybeHideCancelButton();
     },
+    /**
+     * Clear the field
+     */
     clear: function clear(){
       this.$el.val('');
 
       this.options.focusAfterClear && this.$el.focus();
       this.hideCancelButton();
     },
+    /**
+     * Creates a Cancel Button and attach events to it
+     */
     setupCancelButton: function setupCancelButton(){
       this.$cancelButton = $( document.createElement('div') );
 
@@ -39,6 +44,9 @@
         .on('click', $.proxy(this.clear, this) )
         .insertAfter(this.$el);
     },
+    /**
+     * Positions the Cancel Button to where it belongs
+     */
     repositionCancelButton: function repositionCancelButton(){
       var position = this.$el.position();
 
@@ -47,9 +55,22 @@
 
       this.$cancelButton.offset(position);
     },
+    /**
+     * Hide the Cancel Button if there is any reason of that
+     * Aka field empty
+     */
+    maybeHideCancelButton: function maybeHideCancelButton(){
+      this.$el.val().trim().length === 0 && this.hideCancelButton();
+    },
+    /**
+     * Hide the Cancel Button
+     */
     hideCancelButton: function hideCancelButton(){
       this.$cancelButton.addClass('hidden');
     },
+    /**
+     * Show the Cancel Button
+     */
     showCancelButton: function showCancelButton(){
       this.repositionCancelButton();
 
