@@ -12,7 +12,7 @@
     -webkit-appearance: none;
   }
 
-  .searchfield-cancel-button{
+  .search-cancel-button{
     display: block;
     height: 12px;
     outline: 1px solid red;
