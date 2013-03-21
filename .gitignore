@@ -1,2 +1,5 @@
-src/components
+components
+src/vendor
+test/resources
+
 node_modules

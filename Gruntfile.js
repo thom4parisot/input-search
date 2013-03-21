@@ -1,12 +1,22 @@
 /*global module:false*/
 module.exports = function(grunt) {
-
-
-  // Project configuration.
   grunt.initConfig({
     // Metadata.
     meta: {
       version: '0.1.0'
+    },
+    copy: {
+      src: {
+         files: [
+           { expand: true, cwd: 'components/', src: 'jquery/*.js', dest: 'src/vendor/'  },
+           { expand: true, cwd: 'components/', src: 'modernizr/*.js', dest: 'src/vendor/'  }
+         ]
+      },
+      tests: {
+        files: [
+          { expand: true, cwd: 'components/', src: '**/*.*', dest: 'test/resources/'  }
+        ]
+      }
     },
     jquerymanifest: {
       options: {
@@ -23,19 +33,21 @@ module.exports = function(grunt) {
       }
     },
     qunit: {
-      files: ['test/**/*.html']
+      files: ['http://localhost:3001/searchfield.html']
     }
   });
 
   // These plugins provide necessary tasks.
-  //grunt.loadNpmTasks('grunt-contrib-concat');
   //grunt.loadNpmTasks('grunt-contrib-uglify');
   //grunt.loadNpmTasks('grunt-contrib-jshint');
   //grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-jquerymanifest');
 
   // Default task.
   grunt.registerTask('default', [/*'qunit', */'jquerymanifest']);
+  grunt.registerTask('build', ['copy:src']);
+  grunt.registerTask('test', ['copy:tests', 'qunit']);
 
 };
