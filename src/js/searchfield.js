@@ -12,21 +12,6 @@
 
   Searchfield.prototype = {
     /**
-     * Focusing a search field
-     */
-    focusin: function focusin(){
-      this.maybeHideCancelButton();
-    },
-    keyup: function keyup(){
-      this.maybeHideCancelButton();
-    },
-    /**
-     * Leaving a search field
-     */
-    focusout: function focusout(){
-      this.maybeHideCancelButton();
-    },
-    /**
      * Clear the field
      */
     clear: function clear(){
@@ -130,6 +115,6 @@
    */
   $(document)
     .on('focus blur keyup', 'input[type="search"].input-search', function(event){
-      $(this).inputSearch(event.type);
+      $(this).inputSearch('maybeHideCancelButton');
     });
 })(jQuery, document);
