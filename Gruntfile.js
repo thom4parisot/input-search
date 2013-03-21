@@ -46,7 +46,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jquerymanifest');
 
   // Default task.
-  grunt.registerTask('default', [/*'qunit', */'jquerymanifest']);
+  grunt.registerTask('default', ['qunit', 'jquerymanifest']);
   grunt.registerTask('build', ['copy:src']);
   grunt.registerTask('test', ['copy:tests', 'qunit']);
 
