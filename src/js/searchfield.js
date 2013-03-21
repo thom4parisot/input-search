@@ -14,13 +14,16 @@
     /**
      * Focusing a search field
      */
-    focus: function focus(){
-      this.$cancelButton && this.showCancelButton();
+    focusin: function focusin(){
+      this.maybeHideCancelButton();
+    },
+    keyup: function keyup(){
+      this.maybeHideCancelButton();
     },
     /**
      * Leaving a search field
      */
-    blur: function blur(){
+    focusout: function focusout(){
       this.maybeHideCancelButton();
     },
     /**
@@ -60,7 +63,11 @@
      * Aka field empty
      */
     maybeHideCancelButton: function maybeHideCancelButton(){
-      this.$el.val().trim().length === 0 && this.hideCancelButton();
+      var isVisible = !this.$cancelButton.hasClass('hidden');
+
+      this.$el.val().trim().length === 0
+        ? (isVisible && this.hideCancelButton())
+        : (!isVisible && this.showCancelButton());
     },
     /**
      * Hide the Cancel Button
@@ -119,10 +126,7 @@
    * Default Event Listeners
    */
   $(document)
-    .on('focus', 'input[type="search"].input-search', function(){
-      $(this).inputSearch('focus');
-    })
-    .on('blur', 'input[type="search"].input-search', function(){
-      $(this).inputSearch('blur');
-    })
+    .on('focus blur keyup', 'input[type="search"].input-search', function(event){
+      $(this).inputSearch(event.type);
+    });
 })(jQuery, document);
