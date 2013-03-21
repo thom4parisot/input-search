@@ -13,9 +13,13 @@
   }
 
   .search-cancel-button{
+    cursor: pointer;
     display: block;
     height: 12px;
     outline: 1px solid red;
     position: absolute;
     width: 12px;
+  }
+  .search-cancel-button.hidden{
+    visibility: hidden;
   }
