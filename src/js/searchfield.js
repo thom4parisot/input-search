@@ -100,7 +100,7 @@
   /**
    * Plugin Defaults
    *
-   * @type {{showCancel: boolean}}
+   * @type {{showCancel: boolean}}.t
    */
   $.fn.inputSearch.defaults = {
     showCancel: true,
@@ -118,7 +118,7 @@
    * Default Event Listeners
    */
   $(document)
-    .on('focus blur keyup', 'input[type="search"].input-search', function(event){
+    .on('focus blur keyup', 'input[type="search"].input-search, .searchfield-as-textfield', function(event){
       $(this).inputSearch('maybeHideCancelButton');
     });
 })(jQuery, document);
