@@ -1,0 +1,28 @@
+{
+  "name": "input-search",
+  "version": "0.1.0",
+  "title": "jquery.input-search",
+  "author": {
+    "name": "Thomas Parisot",
+    "email": "thomas@oncle-tom.net",
+    "url": "http://case.oncle-tom.net"
+  },
+  "licenses": [
+    {
+      "name": "BSD"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "description": "Input search plugin for jQuery",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "input",
+    "search",
+    "html5",
+    "polyfill"
+  ],
+  "homepage": "http://github.com/oncletom/input-search"
+}
