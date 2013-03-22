@@ -8,6 +8,7 @@
     }, TypeError, "Constructor can't work if not binded to an element.");
   });
 
+
   test('Activating Text Element', function(){
     var $input = $('.searchfield-as-textfield:first');
     var handler = $input.data('input-search');
@@ -20,6 +21,7 @@
 
     ok($input.next().get(0) === $cancelButton.get(0), "Cancel button created");
   });
+
 
   test('Testing through API', function(){
     var $input = $('.searchfield-as-textfield:first'), $cancelButton;
@@ -44,6 +46,7 @@
     $input.inputSearch('hideCancelButton');
     equal($cancelButton.hasClass('hidden'), true, "Button has been manually set to hidden");
   });
+
 
   test('Testing through Event handling', function(){
     var $input = $('.searchfield-as-textfield:first'), $cancelButton;
