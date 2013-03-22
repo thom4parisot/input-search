@@ -14,7 +14,8 @@ module.exports = function(grunt) {
       },
       tests: {
         files: [
-          { expand: true, cwd: 'components/', src: '**/*.*', dest: 'test/resources/'  }
+          { expand: true, cwd: 'components/', src: '**/*.*', dest: 'test/resources/'  },
+          { expand: true, cwd: 'src/', src: '**/*.*', dest: 'test/resources/'  }
         ]
       }
     },
@@ -33,7 +34,11 @@ module.exports = function(grunt) {
       }
     },
     qunit: {
-      files: ['http://localhost:3001/searchfield.html']
+      all: {
+        options: {
+          urls: ['http://localhost:3001/searchfield.html']
+        }
+      }
     }
   });
 
@@ -44,6 +49,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['qunit', 'jquerymanifest']);
   grunt.registerTask('build', ['copy', 'qunit', 'jquerymanifest']);
   grunt.registerTask('build-quick', ['copy:src']);
-  grunt.registerTask('test', ['copy:tests', 'qunit']);
+  grunt.registerTask('test', ['copy:tests', 'test-fast']);
+  grunt.registerTask('test-fast', ['qunit']);
 
 };

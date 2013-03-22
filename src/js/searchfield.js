@@ -3,7 +3,11 @@
 
   function Searchfield($el, options){
     this.$el = $el;
-    this.options = options;
+    this.options = options || {};
+
+    if (!$el || !$el instanceof $){
+      throw new TypeError('$el should be a jQuery Selector instance.')
+    }
 
     this.$cancelButton = null;
 
