@@ -31,8 +31,7 @@
       this.$cancelButton = $( document.createElement('div') );
 
       this.$cancelButton
-        .addClass('search-cancel-button')
-        .css('visibility', 'hidden')
+        .addClass('search-cancel-button hidden')
         .on('click', $.proxy(this.clear, this) )
         .insertAfter(this.$el);
     },
