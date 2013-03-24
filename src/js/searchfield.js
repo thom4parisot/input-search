@@ -39,12 +39,13 @@
      * Positions the Cancel Button to where it belongs
      */
     repositionCancelButton: function repositionCancelButton(){
-      var position = this.$el.position();
+      var $el = this.$el;
+      var position = $el.offset();
 
-      position.left += this.$el.outerWidth() - this.$cancelButton.width();
+      position.left += $el.outerWidth() - this.$cancelButton.width() - (parseInt($el.css('border-right'), 10) || 0);
 
       //simulating top=50% + margin-top=-halfsize for middle vertical align
-      position.top += (this.$el.outerHeight() + (parseInt(this.$el.css('border-top-width') || 0, 10))) / 2;
+      position.top += (($el.innerHeight() / 2) + (parseInt($el.css('border-top-width'), 10) || 0));
       position.top -= this.$cancelButton.height() / 2;
 
       this.$cancelButton.offset(position);
