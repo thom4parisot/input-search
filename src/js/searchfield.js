@@ -51,8 +51,7 @@
 	$el.data('input-search-position', $.extend({}, position));
       }
 
-
-      position.left += $el.outerWidth() - this.$cancelButton.width() - (parseInt($el.css('border-right'), 10) || 0);
+      position.left += $el.outerWidth() - this.options.offsetRight - this.$cancelButton.width() - (parseInt($el.css('border-right'), 10) || 0);
 
       //simulating top=50% + margin-top=-halfsize for middle vertical align
       position.top += (($el.innerHeight() / 2) + (parseInt($el.css('border-top-width'), 10) || 0));
@@ -113,8 +112,9 @@
    * @type {{showCancel: boolean}}.t
    */
   $.fn.inputSearch.defaults = {
-    showCancel: true,
-    focusAfterClear: true
+    focusAfterClear: true,
+    offsetRight: 5,
+    showCancel: true
   };
 
   /**
