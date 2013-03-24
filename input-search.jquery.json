@@ -13,7 +13,7 @@
     }
   ],
   "dependencies": {
-    "jquery": "*"
+    "jquery": ">= 1.6.0"
   },
   "description": "Input search plugin for jQuery",
   "keywords": [
