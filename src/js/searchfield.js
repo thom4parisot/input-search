@@ -116,8 +116,15 @@
   /**
    * Default Event Listeners
    */
+  function _initSearchInput(){
+    $(this).inputSearch('maybeHideCancelButton');
+  }
+
   $(document)
-    .on('focus blur keyup', 'input.input-search, .searchfield-as-textfield', function(event){
-      $(this).inputSearch('maybeHideCancelButton');
+    .on('focus blur keyup', '.search-cancel input[type="search"], .searchfield-as-textfield', _initSearchInput)
+    .ready(function(){
+      $(this)
+	.find('.search-cancel input[type="search"][value!=""], .searchfield-as-textfield[value!=""]')
+	.each(_initSearchInput)
     });
 })(jQuery, document);
