@@ -6,10 +6,24 @@
 </head>
 <body>
 
-<form action="#" method="get">
+<form action="#" method="get" class="regular-container">
     <p>
-        <label for="#search_input">What are looking for?</label>
-        <input type="search" class="input-search" placeholder="Please type a query" required />
+	<label for="search-input">What are looking for?</label>
+	<input id="search-input" type="search" class="searchfield-as-textfield" placeholder="Please type a query" required />
+    </p>
+
+    <p>
+	<label for="location-input">Where do you live in?</label>
+	<input id="location-input" type="text" class="searchfield-as-textfield" placeholder="City or Country" value="London, UK" />
+    </p>
+</form>
+
+<form action="#" method="get" class="absolute-container">
+    <p>
+	<label for="another-search">Still searching?</label>
+	<input id="another-search" name="am" type="search" required/>
+	<input type="search" name="stram" required/>
+	<input type="search" name="gram" required/>
     </p>
 </form>
 
