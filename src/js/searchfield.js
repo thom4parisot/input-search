@@ -41,6 +41,16 @@
     repositionCancelButton: function repositionCancelButton(){
       var $el = this.$el;
       var position = $el.offset();
+      var previousPosition = $el.data('input-search-position') || {};
+
+      // No need to recalculate position
+      if (previousPosition.left === position.left && previousPosition.top === position.top){
+	return false;
+      }
+      else{
+	$el.data('input-search-position', $.extend({}, position));
+      }
+
 
       position.left += $el.outerWidth() - this.$cancelButton.width() - (parseInt($el.css('border-right'), 10) || 0);
 
