@@ -3,6 +3,7 @@
 <head>
     <title>input[type="search"] Sample</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/examples.css">
 </head>
 <body>
 
@@ -18,12 +19,12 @@
     </p>
 </form>
 
-<form action="#" method="get" class="absolute-container">
+<form action="#" method="get" id="absolute-container">
     <p>
 	<label for="another-search">Still searching?</label>
-	<input id="another-search" name="am" type="search" required/>
-	<input type="search" name="stram" required/>
-	<input type="search" name="gram" required/>
+	<input id="another-search" name="q[]" type="search" value="am" required/>
+	<input type="search" name="q[]" value="Stram" required/>
+	<input type="search" name="q[]" value="Gram" required/>
     </p>
 </form>
 
