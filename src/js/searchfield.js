@@ -109,7 +109,7 @@
   /**
    * Plugin Defaults
    *
-   * @type {{showCancel: boolean}}.t
+   * @type {{focusAfterClear: boolean, offsetRight: number, offsetTop: number, showCancel: boolean}}
    */
   $.fn.inputSearch.defaults = {
     focusAfterClear: true,
