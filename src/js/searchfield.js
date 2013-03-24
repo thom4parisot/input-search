@@ -1,17 +1,24 @@
 (function($, document, undefined){
   "use strict";
 
+  /**
+   * Searchfield constructor
+   *
+   * @param {jQuery|Element} $el Input element we want to augment
+   * @param {Object=} options Behaviour options; see `$.fn.inputSearch.defaults`
+   * @constructor
+   */
   function Searchfield($el, options){
     this.$el = $el;
     this.options = options || {};
+    this.$cancelButton = null;
 
     if (!$el || !$el instanceof $){
       throw new TypeError('$el should be a jQuery Selector instance.')
     }
 
-    this.$cancelButton = null;
-
-    options.showCancel && this.setupCancelButton();
+    // Initializing features
+    this.options.showCancel && this.setupCancelButton();
   }
 
   Searchfield.prototype = {
@@ -45,7 +52,7 @@
 
       // No need to recalculate position
       if (previousPosition.left === position.left && previousPosition.top === position.top){
-	return false;
+	return;
       }
       else{
 	$el.data('input-search-position', $.extend({}, position));
@@ -87,6 +94,7 @@
   };
 
   /**
+   * jQuery Plugin for Searchfield
    *
    * @param {Object|String|undefined=} option
    */
