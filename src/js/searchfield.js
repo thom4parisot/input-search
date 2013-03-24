@@ -54,7 +54,7 @@
       position.left += $el.outerWidth() - this.options.offsetRight - this.$cancelButton.width() - (parseInt($el.css('border-right'), 10) || 0);
 
       //simulating top=50% + margin-top=-halfsize for middle vertical align
-      position.top += (($el.innerHeight() / 2) + (parseInt($el.css('border-top-width'), 10) || 0));
+      position.top += (($el.innerHeight() / 2) + (parseInt($el.css('border-top-width'), 10) || 0)) + this.options.offsetTop;
       position.top -= this.$cancelButton.height() / 2;
 
       this.$cancelButton.offset(position);
@@ -114,6 +114,7 @@
   $.fn.inputSearch.defaults = {
     focusAfterClear: true,
     offsetRight: 5,
+    offsetTop: 0,
     showCancel: true
   };
 
