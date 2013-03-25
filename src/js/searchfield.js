@@ -58,11 +58,11 @@
 	$el.data('input-search-position', $.extend({}, position));
       }
 
-      position.left += $el.outerWidth() - this.options.offsetRight - this.$cancelButton.width() - (parseInt($el.css('border-right'), 10) || 0);
+      position.left += $el.outerWidth() - this.options.offsetRight - this.$cancelButton.outerWidth() - (parseInt($el.css('border-right'), 10) || 0);
 
       //simulating top=50% + margin-top=-halfsize for middle vertical align
       position.top += (($el.innerHeight() / 2) + (parseInt($el.css('border-top-width'), 10) || 0)) + this.options.offsetTop;
-      position.top -= this.$cancelButton.height() / 2;
+      position.top -= this.$cancelButton.outerHeight() / 2;
 
       this.$cancelButton.offset(position);
     },
