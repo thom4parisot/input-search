@@ -22,7 +22,7 @@ You can either use this repository as a submodule or download a static copy.
 However the easier way to track upgrades is to use the [bower](https://github.com/twitter/bower) component manager:
 
 ```bash
-bower install input-search --save
+bower install oncletom/input-search --save
 ```
 
 This will copy the necessary files for a production use.
