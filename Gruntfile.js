@@ -34,11 +34,7 @@ module.exports = function(grunt) {
       }
     },
     qunit: {
-      all: {
-        options: {
-          urls: ['http://localhost:3001/searchfield.html']
-        }
-      }
+      all: ['test/*.html']
     }
   });
 
