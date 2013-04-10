@@ -23,13 +23,18 @@ module.exports = function(grunt) {
       options: {
         source: grunt.file.readJSON('package.json'),
         overrides: {
-          title: "jquery.input-search",
+          title: "Input Search Polyfill",
           author: {
             name: "Thomas Parisot",
             email: "thomas@oncle-tom.net",
             url: "https://case.oncle-tom.net"
           },
-          homepage: "https://github.com/oncletom/input-search"
+          homepage: "https://github.com/oncletom/input-search",
+          docs: "https://github.com/oncletom/input-search/blob/master/README.md",
+          bugs: "https://github.com/oncletom/input-search/issues",
+          dependencies: {
+            jquery: ">= 1.8.0"
+          }
         }
       }
     },
