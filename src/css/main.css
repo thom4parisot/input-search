@@ -1,5 +1,5 @@
-.search-cancel input[type="search"],
-.searchfield-as-textfield{
+.no-search-cancel input[type="search"],
+.textfield-as-searchfield{
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   -ms-appearance: textfield;
@@ -9,8 +9,8 @@
   padding-right: 14px;
 }
 
-  .search-cancel input[type="search"]::-webkit-search-cancel-button,
-  .searchfield-as-textfield::-webkit-search-cancel-button{
+  .no-search-cancel input[type="search"]::-webkit-search-cancel-button,
+  .textfield-as-searchfield::-webkit-search-cancel-button{
     -webkit-appearance: none;
   }
 

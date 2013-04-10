@@ -34,7 +34,7 @@ Include the files in your HTML documents or your frontend workflow.
 
 ## Usage
 
-By default, every `input.searchfield-as-textfield` element will be polyfilled.
+By default, every `input.textfield-as-searchfield` element will be polyfilled.
 If you add the `main.css` in your HTML document, polyfilled features will be styled to be usable on the go.
 
 ### Example
@@ -61,7 +61,7 @@ Once initialized with all the features enabled, the DOM will be modified to like
 The plugin is initiazed with these defaults:
 
 ```javascript
-$('input.searchfield-as-textfield').inputSearch({
+$('input.textfield-as-searchfield').inputSearch({
   "focusAfterClear": true,
   "offsetRight": 5,
   "offsetTop": 0,

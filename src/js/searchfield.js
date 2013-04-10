@@ -141,10 +141,10 @@
   }
 
   $(document)
-    .on('focus blur keyup', '.search-cancel input[type="search"], .searchfield-as-textfield', _initSearchInput)
+    .on('focus blur keyup', '.no-search-cancel input[type="search"], .textfield-as-searchfield', _initSearchInput)
     .ready(function(){
       $(this)
-	.find('.search-cancel input[type="search"][value!=""], .searchfield-as-textfield[value!=""]')
+	.find('.no-search-cancel input[type="search"][value!=""], .textfield-as-searchfield[value!=""]')
 	.each(_initSearchInput)
     });
 })(jQuery, document);

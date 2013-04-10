@@ -10,7 +10,7 @@
 
 
   test('Activating Text Element', function(){
-    var $input = $('.searchfield-as-textfield:first');
+    var $input = $('.textfield-as-searchfield:first');
     var handler = $input.data('input-search');
     var $cancelButton;
 
@@ -24,7 +24,7 @@
 
 
   test('Testing through API', function(){
-    var $input = $('.searchfield-as-textfield:first'), $cancelButton;
+    var $input = $('.textfield-as-searchfield:first'), $cancelButton;
 
     $input.inputSearch('maybeHideCancelButton');
     $cancelButton = $input.data('input-search').$cancelButton;
@@ -49,7 +49,7 @@
 
 
   test('Testing through Event handling', function(){
-    var $input = $('.searchfield-as-textfield:first'), $cancelButton;
+    var $input = $('.textfield-as-searchfield:first'), $cancelButton;
 
     $input.focus();
     $cancelButton = $input.data('input-search').$cancelButton;
