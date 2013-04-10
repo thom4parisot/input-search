@@ -9,7 +9,8 @@
   },
   "licenses": [
     {
-      "name": "BSD"
+      "name": "MIT",
+      "url": "https://github.com/oncletom/input-search/blob/master/LICENSE-MIT"
     }
   ],
   "dependencies": {
