@@ -58,7 +58,7 @@ Once initialized with all the features enabled, the DOM will be modified to like
 
 ## Configure
 
-The plugin is initiazed with these defaults:
+The plugin is initialized with these defaults:
 
 ```javascript
 $('input.textfield-as-searchfield').inputSearch({
