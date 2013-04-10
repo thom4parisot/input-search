@@ -15,3 +15,14 @@ form input:nth-of-type(2){
   margin: 10px;
   padding: 20px;
 }
+
+  .fancy ~ .search-cancel-button{
+    background: transparent;
+    font-size: 2em;
+    height: 1em; /* adjusting size to content */
+    width: 1em;  /* adjusting size to content */
+  }
+  .fancy ~ .search-cancel-button:after{
+    color: deeppink;
+    content: "\2718";
+  }
