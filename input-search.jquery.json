@@ -5,16 +5,16 @@
   "author": {
     "name": "Thomas Parisot",
     "email": "thomas@oncle-tom.net",
-    "url": "http://case.oncle-tom.net"
+    "url": "https://case.oncle-tom.net"
   },
   "licenses": [
     {
-      "name": "MIT",
-      "url": "https://github.com/oncletom/input-search/blob/master/LICENSE-MIT"
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
     }
   ],
   "dependencies": {
-    "jquery": ">= 1.6.0"
+    "jquery": "*"
   },
   "description": "Input search plugin for jQuery",
   "keywords": [
@@ -25,5 +25,5 @@
     "html5",
     "polyfill"
   ],
-  "homepage": "http://github.com/oncletom/input-search"
+  "homepage": "https://github.com/oncletom/input-search"
 }

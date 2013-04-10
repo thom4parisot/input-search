@@ -27,9 +27,9 @@ module.exports = function(grunt) {
           author: {
             name: "Thomas Parisot",
             email: "thomas@oncle-tom.net",
-            url: "http://case.oncle-tom.net"
+            url: "https://case.oncle-tom.net"
           },
-          homepage: "http://github.com/oncletom/input-search"
+          homepage: "https://github.com/oncletom/input-search"
         }
       }
     },

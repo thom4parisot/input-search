@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "grunt test",
-    "postinstall": "bower install"
+    "postinstall": "bower install && grunt build-quick"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "polyfill"
   ],
   "author": "Thomas Parisot <thomas@oncle-tom.net>",
-  "license": "BSD",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt-jquerymanifest": "~0.1.0",
