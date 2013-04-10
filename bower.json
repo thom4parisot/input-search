@@ -1,11 +1,7 @@
 {
   "name": "input-search",
   "version": "0.1.0",
-  "main": [
-    "./src/css/main.css",
-    "./src/js/searchfield.js",
-    "./src/main.html"
-  ],
+  "main": "src/js/main.js",
   "dependencies": {
   },
   "devDependencies": {
