@@ -1,7 +1,7 @@
 {
   "name": "input-search",
   "version": "0.1.0",
-  "title": "jquery.input-search",
+  "title": "Input Search Polyfill",
   "author": {
     "name": "Thomas Parisot",
     "email": "thomas@oncle-tom.net",
@@ -14,9 +14,9 @@
     }
   ],
   "dependencies": {
-    "jquery": "*"
+    "jquery": ">= 1.8.0"
   },
-  "description": "Input search plugin for jQuery",
+  "description": "This is a tested HTML5 polyfill for <code>input[type=\"search\"]</code>.\nIts goal is to provide a cross-browser <em>fully-featured <code>input</code> element</em> without extra-markup.",
   "keywords": [
     "jquery",
     "plugin",
