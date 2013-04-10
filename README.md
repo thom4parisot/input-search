@@ -5,8 +5,8 @@
 This is a tested HTML5 polyfill for `input[type="search"]`.
 Its goal is to provide a cross-browser *fully-featured `input` element* without extra-markup.
 
-This project has been initiated within [BBC IRFS](http://bbc.co.uk/rd/irfs.html) [Snippets project](http://www.bbc.co
-.uk/rd/projects/snippets).
+This project has been initiated within
+[BBC IRFS](http://bbc.co.uk/rd/irfs.html) [Snippets project](http://www.bbc.co.uk/rd/projects/snippets).
 
 ## Features
 
