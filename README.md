@@ -15,6 +15,8 @@ is to serve the project first ;-)
 
 ### Cancel Button
 
+![Cancel Button Example](https://raw.github.com/oncletom/input-search/master/misc/img/cancel-button.png)
+
 The button enables the user to clear the field on the go.
 This feature is natively implemented only in Webkit browsers so far (and
 maybe several other mobile browser vendors so far).
